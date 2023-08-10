@@ -1,0 +1,97 @@
+[
+  {
+    "value": "reset",
+    "label": "C",
+    "style": "secondary"
+  },
+  {
+    "value": "percent",
+    "label": "%",
+    "style": "secondary"
+  },
+  {
+    "value": "delete",
+    "label": "D",
+    "style": "secondary"
+  },
+  {
+    "value": "divide",
+    "label": "÷",
+    "style": "secondary"
+  },
+  {
+    "value": 7,
+    "label": "7",
+    "style": "primary"
+  },
+  {
+    "value": 8,
+    "label": "8",
+    "style": "primary"
+  },
+  {
+    "value": 9,
+    "label": "9",
+    "style": "primary"
+  },
+  {
+    "value": "multiply ",
+    "label": "x",
+    "style": "secondary"
+  },
+  {
+    "value": "4",
+    "label": 4,
+    "style": "primary"
+  },
+  {
+    "value": "5",
+    "label": 5,
+    "style": "primary"
+  },
+  {
+    "value": "6",
+    "label": 6,
+    "style": "primary"
+  },
+  {
+    "value": "less",
+    "label": "-",
+    "style": "secondary"
+  },
+  {
+    "value": "1",
+    "label": 1,
+    "style": "primary"
+  },
+  {
+    "value": "2",
+    "label": 2,
+    "style": "primary"
+  },
+  {
+    "value": "3",
+    "label": 3,
+    "style": "primary"
+  },
+  {
+    "value": "plus",
+    "label": "+",
+    "style": "secondary"
+  },
+  {
+    "value": "0",
+    "label": 0,
+    "style": "primary"
+  },
+  {
+    "value": "dot",
+    "label": ".",
+    "style": "primary"
+  },
+  {
+    "value": "equal",
+    "label": "=",
+    "style": "equal"
+  }
+]
