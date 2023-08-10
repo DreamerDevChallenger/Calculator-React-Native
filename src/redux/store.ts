@@ -1,11 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import calculSlice from "./reducer/calcul"
+import calculSlice from "./reducer/calcul";
 import thunk from "redux-thunk";
 import { persistReducer } from "redux-persist";
 
 const reducers = combineReducers({
-  calculSlice
+  calcul: calculSlice,
 });
 
 const persistConfig = {

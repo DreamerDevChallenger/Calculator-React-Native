@@ -20,14 +20,13 @@ import { PersistGate } from "redux-persist/integration/react";
 const persistor = persistStore(store);
 
 interface ItemProp {
-  label: string | number;
+  label: string;
   style: string;
-  value: string | number;
+  value: string;
 }
 
 export default function App() {
   const [data, setDataSource] = React.useState<Array<ItemProp>>([]);
-  const [value, setValue] = React.useState<number>(0);
 
   React.useEffect(() => {
     return setDataSource(items);
@@ -37,7 +36,7 @@ export default function App() {
     <Provider store={store}>
       <PersistGate loading={<Text>Loading</Text>} persistor={persistor}>
         <SafeAreaView style={styles.container}>
-          <ScreenValue input={value} />
+          <ScreenValue />
           {data && (
             <FlatList
               numColumns={4}
@@ -48,7 +47,6 @@ export default function App() {
                 <ButtonUI
                   label={item.label}
                   style={item.style}
-                  setValue={setValue}
                   value={item.value}
                 />
               )}

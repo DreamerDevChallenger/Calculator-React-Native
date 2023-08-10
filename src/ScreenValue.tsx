@@ -1,9 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
+import { selectCalcul } from "./redux/selectors";
+import { useSelector } from "react-redux";
 
-export default (props: { input: any }) => {
+export default () => {
+  const calcul = useSelector(selectCalcul);
+  console.log(calcul);
+
   return (
     <View style={styles.container}>
-      <Text style={[styles.text]}>{props.input}</Text>
+      <Text style={[styles.text]}>{calcul}</Text>
     </View>
   );
 };

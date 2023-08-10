@@ -1,33 +1,93 @@
+const conditionOperator = ({
+  draft,
+  result,
+}: {
+  draft: string;
+  result: string;
+}) => {
+  if (draft.length === 0) {
+    return draft;
+  } else if (draft.slice(draft.length - 1) === "÷") {
+    return draft;
+  } else if (draft.slice(draft.length - 1) === "+") {
+    return draft;
+  } else if (draft.slice(draft.length - 1) === "-") {
+    return draft;
+  } else if (draft.slice(draft.length - 1) === "x") {
+    return draft;
+  } else {
+    return result;
+  }
+};
 
 export const calculAction = {
-  "0": (draft: number) => {
-    return draft;
+  zero: (draft: string) => {
+    return draft + "0";
   },
-  "1": (draft: number) => {
-    return draft;
+  one: (draft: string) => {
+    return draft + "1";
   },
-  "2": (draft: number) => {
-    return draft;
+  two: (draft: string) => {
+    return draft + "2";
   },
-  "3": (draft: number) => {
-    return draft;
+  three: (draft: string) => {
+    return draft + "3";
   },
-  "4": (draft: number) => {
-    return draft;
+  four: (draft: string) => {
+    return draft + "4";
   },
-  "5": (draft: number) => {
-    return draft;
+  five: (draft: string) => {
+    return draft + "5";
   },
-  "6": (draft: number) => {
-    return draft;
+  six: (draft: string) => {
+    return draft + "6";
   },
-  "7": (draft: number) => {
-    return draft;
+  seven: (draft: string) => {
+    return draft + "7";
   },
-  "8": (draft: number) => {
-    return draft;
+  eight: (draft: string) => {
+    return draft + "8";
   },
-  "9": (draft: number) => {
-    return draft;
+  nine: (draft: string) => {
+    return draft + "9";
   },
-}
+  dot: (draft: string) => {
+    if (draft.includes(".")) {
+      return draft;
+    } else {
+      return draft + ".";
+    }
+  },
+  plus: (draft: string) => {
+    return conditionOperator({ draft, result: draft + "+" });
+  },
+  less: (draft: string) => {
+    return conditionOperator({ draft, result: draft + "-" });
+  },
+  multiply: (draft: string) => {
+    return conditionOperator({ draft, result: draft + "x" });
+  },
+  divide: (draft: string) => {
+    return conditionOperator({ draft, result: draft + "÷" });
+  },
+  remove: (draft: string) => {
+    return draft.slice(0, -1);
+  },
+  percent: (draft: string) => {
+    return draft + "%";
+  },
+  reset: (draft: string) => {
+    return (draft = "");
+  },
+  result: (draft: string) => {
+    const result = draft.replace(/x/g, "*").replace(/÷/g, "/");
+
+    const value = Function("return " + result)();
+    console.log(value);
+
+    return conditionOperator({
+      draft,
+      result: (draft = JSON.stringify(value)),
+    });
+  },
+};

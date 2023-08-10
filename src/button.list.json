@@ -10,7 +10,7 @@
     "style": "secondary"
   },
   {
-    "value": "delete",
+    "value": "remove",
     "label": "D",
     "style": "secondary"
   },
@@ -20,38 +20,38 @@
     "style": "secondary"
   },
   {
-    "value": 7,
+    "value": "seven",
     "label": "7",
     "style": "primary"
   },
   {
-    "value": 8,
+    "value": "eight",
     "label": "8",
     "style": "primary"
   },
   {
-    "value": 9,
+    "value": "nine",
     "label": "9",
     "style": "primary"
   },
   {
-    "value": "multiply ",
+    "value": "multiply",
     "label": "x",
     "style": "secondary"
   },
   {
-    "value": "4",
-    "label": 4,
+    "value": "four",
+    "label": "4",
     "style": "primary"
   },
   {
-    "value": "5",
-    "label": 5,
+    "value": "five",
+    "label": "5",
     "style": "primary"
   },
   {
-    "value": "6",
-    "label": 6,
+    "value": "six",
+    "label": "6",
     "style": "primary"
   },
   {
@@ -60,18 +60,18 @@
     "style": "secondary"
   },
   {
-    "value": "1",
-    "label": 1,
+    "value": "one",
+    "label": "1",
     "style": "primary"
   },
   {
-    "value": "2",
-    "label": 2,
+    "value": "two",
+    "label": "2",
     "style": "primary"
   },
   {
-    "value": "3",
-    "label": 3,
+    "value": "three",
+    "label": "3",
     "style": "primary"
   },
   {
@@ -80,8 +80,8 @@
     "style": "secondary"
   },
   {
-    "value": "0",
-    "label": 0,
+    "value": "zero",
+    "label": "0",
     "style": "primary"
   },
   {
