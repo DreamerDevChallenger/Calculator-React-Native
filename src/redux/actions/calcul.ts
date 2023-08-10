@@ -3,7 +3,7 @@ const conditionOperator = ({
   result,
 }: {
   draft: string;
-  result: string;
+  result: string | Function;
 }) => {
   if (draft.length === 0) {
     return draft;
@@ -15,8 +15,14 @@ const conditionOperator = ({
     return draft;
   } else if (draft.slice(draft.length - 1) === "x") {
     return draft;
+  } else if (draft.slice(draft.length - 1) === "%") {
+    return draft;
   } else {
-    return result;
+    if (typeof result === "string") {
+      return result;
+    } else {
+      return result();
+    }
   }
 };
 
@@ -80,14 +86,17 @@ export const calculAction = {
     return (draft = "");
   },
   result: (draft: string) => {
-    const result = draft.replace(/x/g, "*").replace(/÷/g, "/");
+    const replace = draft.replace(/x/g, "*").replace(/÷/g, "/");
 
-    const value = Function("return " + result)();
-    console.log(value);
+    function result() {
+      const value = Function("return " + replace)();
+      console.log(value);
+      return (draft = JSON.stringify(value));
+    }
 
     return conditionOperator({
       draft,
-      result: (draft = JSON.stringify(value)),
+      result: result,
     });
   },
 };
